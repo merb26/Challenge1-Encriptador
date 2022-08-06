@@ -20,5 +20,5 @@ const encriptar = () => {
     }
   }
 
-  console.log(textoEncriptado)
+  document.getElementById("resultado").innerText = textoEncriptado
 }
