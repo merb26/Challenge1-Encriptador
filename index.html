@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Challenge 1 - Encriptador</title>
+    <script src="/js/encriptador.js"></script>
+
 </head>
 
 <body>
@@ -15,16 +17,16 @@
     <div>
         <!-- Campo para el texto que va a ser encriptado/desencriptado -->
         <div>
-            <textarea cols="50" rows="25"></textarea>
+            <textarea cols="50" rows="25" placeholder="Ingrese el texto aquí" id="txt"></textarea>
         </div>
 
-        <button>Encriptar</button>
+        <button onclick=encriptar()>Encriptar</button>
         <button>Desencriptar</button>
     </div>
 
     <!-- Área para mostrar el texto encriptado/desencriptado -->
     <div>
-
+        Muestra el texto encriptado/desencriptado
     </div>
 
     <footer>
