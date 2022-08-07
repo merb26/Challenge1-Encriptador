@@ -7,15 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Challenge 1 - Encriptador</title>
     <script src="/js/app.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/estilo.css">
 
 </head>
 
-<body>
+<body class="container-fluid row">
 
-    <h1>Encriptador</h1>
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                                logotipo                                 -->
+    <!-- ----------------------------------------------------------------------- -->
+    <div class="col-2">
+        <img src="/img/Logo.svg" alt="logotipo">
+    </div>
 
-    <div>
-        <!-- Campo para el texto que va a ser encriptado/desencriptado -->
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                            Ingreso del texto                            -->
+    <!-- ----------------------------------------------------------------------- -->
+    <div class="col-6">
         <div>
             <textarea cols="50" rows="25" placeholder="Ingrese el texto aquí" id="txt"></textarea>
         </div>
@@ -24,11 +34,18 @@
         <button onclick=desencriptar()>Desencriptar</button>
     </div>
 
-    <!-- Área para mostrar el texto encriptado/desencriptado -->
-    <div id="resultado">
-        Muestra el texto encriptado/desencriptado
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                Muestra texto encriptado o desencriptado                 -->
+    <!-- ----------------------------------------------------------------------- -->
+    <div class="col-4">
+        <div id="resultado">
+            Muestra el texto encriptado/desencriptado
+        </div>
     </div>
 
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                               Encabezado                                -->
+    <!-- ----------------------------------------------------------------------- -->
     <footer>
 
     </footer>
