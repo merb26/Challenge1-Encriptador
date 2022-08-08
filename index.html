@@ -18,28 +18,42 @@
     <!-- ----------------------------------------------------------------------- -->
     <!--                                logotipo                                 -->
     <!-- ----------------------------------------------------------------------- -->
-    <div class="col-2">
+    <div class="logotipo col-lg-2">
         <img src="/img/Logo.svg" alt="logotipo">
     </div>
 
     <!-- ----------------------------------------------------------------------- -->
     <!--                            Ingreso del texto                            -->
     <!-- ----------------------------------------------------------------------- -->
-    <div class="col-6">
-        <div>
-            <textarea cols="50" rows="25" placeholder="Ingrese el texto aquí" id="txt"></textarea>
-        </div>
+    <div class="ingresoTexto col-lg-7">
 
-        <button onclick=encriptar()>Encriptar</button>
-        <button onclick=desencriptar()>Desencriptar</button>
+        <textarea rows="5" placeholder="Ingrese el texto aquí" id="txt" class="row input-group txtArea"></textarea>
+
+        <div class="row botones">
+            <div class="requisito">
+                <img src="/img/Vector.svg" alt="requisito">
+                Solo letras minúsculas y sin acentos
+            </div>
+            <button onclick=encriptar() class="btn btn-success shadow-none col btnEncriptar">Encriptar</button>
+            <button onclick=desencriptar()
+                class="btn btn-outline-success shadow-none col btnDesencriptar">Desencriptar</button>
+        </div>
     </div>
 
     <!-- ----------------------------------------------------------------------- -->
     <!--                Muestra texto encriptado o desencriptado                 -->
     <!-- ----------------------------------------------------------------------- -->
-    <div class="col-4">
-        <div id="resultado">
-            Muestra el texto encriptado/desencriptado
+    <div class="cuadro col-lg-3">
+        <div id="resultado" class="resultado">
+        </div>
+        <div class="muñeco" id="muñeco">
+            <img src="/img/Muñeco.svg" alt="muñeco">
+        </div>
+        <div class="texto1" id="texto1">
+            Ningún mensaje fue encontrado
+        </div>
+        <div class="texto2" id="texto2">
+            Ingresa el texto que desees encriptar o desencriptar.
         </div>
     </div>
 

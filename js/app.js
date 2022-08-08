@@ -26,6 +26,9 @@ const encriptar = () => {
     }
   }
 
+  document.getElementById("muñeco").style.display = "none"
+  document.getElementById("texto1").style.display = "none"
+  document.getElementById("texto2").style.display = "none"
   document.getElementById("resultado").innerText = textoEncriptado
 }
 
