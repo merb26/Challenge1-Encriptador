@@ -60,3 +60,11 @@ const desencriptar = () => {
   }
   document.getElementById("resultado").innerText = textoDesencriptado
 }
+
+const copiar = () => {
+  var rango = document.createRange()
+  rango.selectNode(document.getElementById("resultado"))
+  window.getSelection().removeAllRanges() // clear current selection
+  window.getSelection().addRange(rango) // to select text
+  document.execCommand("copy")
+}
