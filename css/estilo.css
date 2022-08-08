@@ -16,10 +16,17 @@ body {
   font-size: 32px;
   line-height: 150%;
   border: none;
-  border-color: Transparent;
   resize: none;
   padding: 15px;
   background: #f3f5fc;
+  color: #0a3871;
+}
+
+.txtArea::placeholder {
+  font-weight: 400px;
+  font-size: 32px;
+  line-height: 150%;
+  color: #0a3871;
 }
 
 .txtArea:focus {
@@ -92,6 +99,7 @@ body {
   line-height: 120%;
   color: #343a40;
   text-align: center;
+  margin: 15px;
 }
 
 .texto2 {
@@ -100,4 +108,5 @@ body {
   line-height: 150%;
   text-align: center;
   color: #495057;
+  margin: 15px;
 }
