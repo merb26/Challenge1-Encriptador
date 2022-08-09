@@ -26,10 +26,7 @@ const encriptar = () => {
     }
   }
 
-  document.getElementById("muñeco").style.display = "none"
-  document.getElementById("texto1").style.display = "none"
-  document.getElementById("texto2").style.display = "none"
-  document.getElementById("resultado").innerText = textoEncriptado
+  manejarElementos(textoEncriptado)
 }
 
 const desencriptar = () => {
@@ -58,7 +55,17 @@ const desencriptar = () => {
       textoDesencriptado += letra
     }
   }
-  document.getElementById("resultado").innerText = textoDesencriptado
+  manejarElementos(textoDesencriptado)
+}
+
+const manejarElementos = texto => {
+  document.getElementById("muñeco").style.display = "none"
+  document.getElementById("texto1").style.display = "none"
+  document.getElementById("texto2").style.display = "none"
+  document.getElementById("resultado").innerText = texto
+  document.getElementById(
+    "btnBuscar"
+  ).innerHTML = `<button onclick=copiar() class="btn btn-success shadow-none btnBuscar">Copiar</button>`
 }
 
 const copiar = () => {

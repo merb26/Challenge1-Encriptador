@@ -33,13 +33,6 @@ body {
   outline: none;
 }
 
-.cuadro {
-  background-color: #ffffff !important;
-  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
-  border-radius: 32px;
-  padding: 15px;
-}
-
 .botones {
   padding-top: 160px;
 }
@@ -55,9 +48,9 @@ body {
 
 .btnEncriptar {
   border-radius: 20px;
-  margin: 15px;
+  margin: 20px;
   background-color: #0a3871;
-  padding: 15px;
+  padding: 10px;
 }
 
 .btnEncriptar:hover {
@@ -70,15 +63,33 @@ body {
 
 .btnDesencriptar {
   border-radius: 20px;
-  margin: 15px;
+  margin: 20px;
   background-color: #d8dfe8 !important;
   color: #0a3871 !important;
   border-color: #0a3871 !important;
-  padding: 15px;
+  padding: 10px;
 }
 
 .btnDesencriptar:hover {
   background-color: #d8dfe8;
+}
+
+.contenedor {
+  display: flex;
+  justify-content: center;
+}
+
+.cuadroResultado {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #ffffff !important;
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+  border-radius: 32px;
+  padding: 15px;
+  margin-left: 20px;
+  margin-bottom: 15px;
+  width: 600px;
 }
 
 .resultado {
@@ -86,6 +97,7 @@ body {
   font-size: 24px;
   line-height: 150%;
   padding: 10px;
+  margin-bottom: 20px;
   color: #495057;
 }
 
@@ -109,4 +121,29 @@ body {
   text-align: center;
   color: #495057;
   margin: 15px;
+}
+
+.divBuscar {
+  display: flex;
+  justify-content: center;
+}
+
+.btnBuscar {
+  background-color: #ffffff;
+  border: 1px solid #0a3871;
+  border-radius: 15px;
+  color: #0a3871;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 10px 125px 10px 125px;
+}
+
+.btnBuscar:hover {
+  background-color: #0a3871;
+}
+
+.btnBuscar:focus {
+  background-color: #ffffff;
+  color: #0a3871;
 }

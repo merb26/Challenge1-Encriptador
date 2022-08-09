@@ -43,19 +43,21 @@
     <!-- ----------------------------------------------------------------------- -->
     <!--                Muestra texto encriptado o desencriptado                 -->
     <!-- ----------------------------------------------------------------------- -->
-    <div class="cuadro col-lg-3">
-        <div id="resultado" class="resultado">
+    <div class="col-lg-3 contenedor">
+        <div class="cuadroResultado">
+            <div id="resultado" class="resultado">
+            </div>
+            <div class="muñeco" id="muñeco">
+                <img src="./img/Muñeco.svg" alt="muñeco">
+            </div>
+            <div class="texto1" id="texto1">
+                Ningún mensaje fue encontrado
+            </div>
+            <div class="texto2" id="texto2">
+                Ingresa el texto que desees encriptar o desencriptar.
+            </div>
+            <div id="btnBuscar" class="divBuscar"></div>
         </div>
-        <div class="muñeco" id="muñeco">
-            <img src="./img/Muñeco.svg" alt="muñeco">
-        </div>
-        <div class="texto1" id="texto1">
-            Ningún mensaje fue encontrado
-        </div>
-        <div class="texto2" id="texto2">
-            Ingresa el texto que desees encriptar o desencriptar.
-        </div>
-        <button onclick=copiar()>Copiar</button>
     </div>
 
     <!-- ----------------------------------------------------------------------- -->
