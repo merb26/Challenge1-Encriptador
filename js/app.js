@@ -9,7 +9,10 @@ const encriptar = () => {
 
   let textoEncriptado = ""
 
-  if (texto == "") return error()
+  if (texto == "") {
+    alert("Hay error")
+    return error()
+  }
 
   for (let item = 0; item < texto.length; item++) {
     let letra = texto[item]
@@ -93,8 +96,8 @@ const quitaElementos = () => {
 const copiar = () => {
   var rango = document.createRange()
   rango.selectNode(document.getElementById("resultado"))
-  window.getSelection().removeAllRanges() // clear current selection
-  window.getSelection().addRange(rango) // to select text
+  window.getSelection().removeAllRanges()
+  window.getSelection().addRange(rango)
   document.execCommand("copy")
 }
 
