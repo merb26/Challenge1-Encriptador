@@ -9,8 +9,13 @@ const encriptar = () => {
 
   let textoEncriptado = ""
 
+  if (texto == "") return error()
+
   for (let item = 0; item < texto.length; item++) {
     let letra = texto[item]
+
+    if (verificar(letra)) return error()
+
     if (letra == "e") {
       textoEncriptado += e
     } else if (letra == "i") {
@@ -33,8 +38,13 @@ const desencriptar = () => {
   const texto = document.querySelector("#txt").value
 
   let textoDesencriptado = ""
+
+  if (texto == "") return error()
+
   for (let index = 0; index < texto.length; index++) {
     const letra = texto[index]
+
+    if (verificar(letra)) return error()
 
     if (letra == "e") {
       textoDesencriptado += "e"
@@ -59,13 +69,25 @@ const desencriptar = () => {
 }
 
 const manejarElementos = texto => {
+  document.getElementById("requisito").style.color = "#495057"
+  document.getElementById("requisito").style.fontSize = "12px"
   document.getElementById("muñeco").style.display = "none"
   document.getElementById("texto1").style.display = "none"
   document.getElementById("texto2").style.display = "none"
+  document.getElementById("resultado").style.display = "block"
   document.getElementById("resultado").innerText = texto
+  document.getElementById("btnBuscar").style.display = "block"
   document.getElementById(
     "btnBuscar"
   ).innerHTML = `<button onclick=copiar() class="btn btn-success shadow-none btnBuscar">Copiar</button>`
+}
+
+const quitaElementos = () => {
+  document.getElementById("muñeco").style.display = "block"
+  document.getElementById("texto1").style.display = "block"
+  document.getElementById("texto2").style.display = "block"
+  document.getElementById("resultado").style.display = "none"
+  document.getElementById("btnBuscar").style.display = "none"
 }
 
 const copiar = () => {
@@ -74,4 +96,28 @@ const copiar = () => {
   window.getSelection().removeAllRanges() // clear current selection
   window.getSelection().addRange(rango) // to select text
   document.execCommand("copy")
+}
+
+const verificar = letra => {
+  const acentos = ["á", "é", "ú", "í"]
+
+  for (let item = 0; item < acentos.length; item++) {
+    if (letra.toLowerCase() == acentos[item]) {
+      quitaElementos()
+      return true
+    }
+  }
+
+  if (letra == letra.toUpperCase() && letra != " " && letra != "!") {
+    quitaElementos()
+    return true
+  } else {
+    return false
+  }
+}
+
+const error = () => {
+  quitaElementos()
+  document.getElementById("requisito").style.color = "red"
+  document.getElementById("requisito").style.fontSize = "16px"
 }
