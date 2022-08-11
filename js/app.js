@@ -10,14 +10,15 @@ const encriptar = () => {
   let textoEncriptado = ""
 
   if (texto == "") {
-    alert("Hay error")
     return error()
   }
 
   for (let item = 0; item < texto.length; item++) {
     let letra = texto[item]
 
-    if (verificar(letra)) return error()
+    if (verificar(letra)) {
+      return error()
+    }
 
     if (letra == "e") {
       textoEncriptado += e
@@ -42,12 +43,16 @@ const desencriptar = () => {
 
   let textoDesencriptado = ""
 
-  if (texto == "") return error()
+  if (texto == "") {
+    return error()
+  }
 
   for (let index = 0; index < texto.length; index++) {
     const letra = texto[index]
 
-    if (verificar(letra)) return error()
+    if (verificar(letra)) {
+      return error()
+    }
 
     if (letra == "e") {
       textoDesencriptado += "e"
