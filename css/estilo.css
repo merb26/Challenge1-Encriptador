@@ -124,8 +124,7 @@ body {
 }
 
 .divBuscar {
-  display: flex;
-  justify-content: center;
+  text-align: center;
 }
 
 .btnBuscar {
